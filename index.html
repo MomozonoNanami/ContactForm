@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>IndexForm</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form action="#0">
+		<div>
+			<input required type="text" id="first_name" name="first_name" placeholder=" " />
+			<label for="first_name">First name</label>
+		</div>
+		<div>
+			<input required type="text" id="last_name" name="last_name" placeholder=" " />
+			<label for="last_name">Last name</label>
+		</div>
+		<div>
+			<input required type="email" id="email" name="email" placeholder=" " />
+			<label for="email">Email address</label>
+			<div class="required">No valid</div>
+		</div>
+		<div>
+			<input required type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" id="password" name="password" placeholder=" " />
+			<label for="password">Password</label>
+			<div class="required">No valid</div>
+		</div>
+
+		<input type="submit" value="Sign Up" />
+	</form>
+</body>
+</html>

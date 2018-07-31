@@ -1,0 +1,90 @@
+body{ 
+	background: #333;
+	font-family: sans-serif;
+	padding: 20px;
+}
+*{
+	box-sizing: border-box;
+}
+form { 
+	max-width: 450px;
+	margin: 0 auto;
+}
+form > div{
+	position: relative;
+	background: white;
+	border-bottom: 1px solid #eee;
+}
+form > div > label{
+	opacity: 0.3;
+	font-weight: bold;
+	position: absolute;
+	top: 22px;
+	left: 20px;
+}
+form > div > input[type="text"],
+form > div > input[type="email"],
+form > div > input[type="password"]{
+	width: 100%;
+	border: 0;
+	padding: 20px 20px 20px 50px;
+	background: #eee;
+}
+form > div > input[type="text"]:focus,
+form > div > input[type="email"]:focus,
+form > div > input[type="password"]:focus{
+	outline: 0;
+	background: white;
+}
+form > div > input[type="text"]:focus + label,
+form > div > input[type="email"]:focus + label,
+form > div > input[type="password"]:focus + label{
+	opacity: 0; 
+}
+form > div > input[type="text"]:valid,
+form > div > input[type="email"]:valid,
+form > div > input[type="password"]:valid{
+	background: url(img/valid.png);
+	background-size: 20px 20px;
+	background-repeat: no-repeat; 
+	background-position: 10px;
+}
+form > div > input[type="text"]:valid + label,
+form > div > input[type="email"]:valid + label,
+form > div > input[type="password"]:valid + label{
+	opacity: 0;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown),
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown){
+	background: pink;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) + label{
+	opacity: 0;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) ~ .required,
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) ~ .required,
+form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) ~ .required {
+	max-height: 200px;
+	padding: 15px 30px 20px 50px;
+}
+form > div > .required{
+	padding: 0 30px 0 50px;
+	color: red;
+	max-height: 0;
+	transition: 0.28s;
+	overflow: hidden;
+	font-style: italic; 
+}
+form > input[type="submit"]{
+	display: block;
+	width: 100%;
+	margin: 20px 0;
+	border: 0; 
+	color: white;
+	background: green;
+	padding: 20px;
+	font-size: 1.2rem; 
+}
